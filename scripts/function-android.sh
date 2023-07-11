@@ -989,7 +989,8 @@ get_aar_directory() {
 }
 
 android_ndk_cmake() {
-  local cmake=$(find "${ANDROID_SDK_ROOT}"/cmake -path \*/bin/cmake -type f -print -quit)
+  local cmakes=($ANDROID_SDK_ROOT/cmake/*)
+  local cmake="${cmakes[-1]}/bin/cmake"
   if [[ -z ${cmake} ]]; then
     cmake=$(which cmake)
   fi
