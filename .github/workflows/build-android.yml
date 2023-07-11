@@ -38,6 +38,6 @@ jobs:
         if: ${{ github.event_name == 'workflow_dispatch' }}
         uses: softprops/action-gh-release@v1
         with:
-          body: The changelog is on the [original repository](https://github.com/arthenica/ffmpeg-kit/tag/v${{ env.FFMPEG_KIT_VERSION }}).
+          body: The changelog is on the [original repository](https://github.com/arthenica/ffmpeg-kit/releases/tag/v${{ env.FFMPEG_KIT_VERSION }}).
           files: prebuilt/bundle-android-aar/ffmpeg-kit/ffmpeg-kit.aar
           tag_name: v${{ env.FFMPEG_KIT_VERSION }}
